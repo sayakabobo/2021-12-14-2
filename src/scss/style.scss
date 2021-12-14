@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+@use "variables" as vars;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "PT Serif", serif;
+  font-size: 1rem;
+  color: vars.$font_color;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: vars.$font_color;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.site-title {
+  width: 110px;
+  line-height: 1px;
+  margin-right: 50px;
+
+  a {
+    display: block;
+  }
+}
+
+.text-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+
+  @media (max-width: 767px) {
+    font-size: 1.25rem;
+  }
+}
+
+.sub-title {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 0.875rem;
+}
+
+/*-------------------------------------------
+mainvisual
+-------------------------------------------*/
+#mainvisual {
+  width: 90vw;
+  margin: 4% auto 0 auto;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    margin: 0;
+  }
+
+  img {
+    @media (max-width: 767px) {
+      width: 100%;
+      height: 50vh;
+      object-fit: cover;
+    }
+  }
+}
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+#header {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  margin: 0 auto 30px auto;
+  padding: 32px 0;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 20px 18px;
+  }
+
+  .navigation {
+    ul {
+      display: flex;
+
+      li {
+        margin-right: 30px;
+        font-size: 0.875rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+/*-------------------------------------------
+concept, work
+-------------------------------------------*/
+.content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 50%;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .text {
+    width: 50%;
+    padding: 0 7%;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+#work {
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  padding: 20px 0;
+
+  .logo {
+    width: 110px;
+  }
+}
